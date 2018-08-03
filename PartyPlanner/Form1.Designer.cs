@@ -37,14 +37,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.dinnerPage = new System.Windows.Forms.TabPage();
             this.birthdayPage = new System.Windows.Forms.TabPage();
+            this.cakeWriting = new System.Windows.Forms.TextBox();
+            this.tooLongLabel = new System.Windows.Forms.Label();
+            this.cakeWritingLabel = new System.Windows.Forms.Label();
             this.numberBirthdayLabel = new System.Windows.Forms.Label();
             this.costBirthday = new System.Windows.Forms.Label();
             this.numBirthday = new System.Windows.Forms.NumericUpDown();
             this.costBirthdayLabel = new System.Windows.Forms.Label();
             this.fancyBirthday = new System.Windows.Forms.CheckBox();
-            this.cakeWritingLabel = new System.Windows.Forms.Label();
-            this.tooLongLabel = new System.Windows.Forms.Label();
-            this.cakeWriting = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.peopleNum)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.dinnerPage.SuspendLayout();
@@ -175,6 +175,37 @@
             this.birthdayPage.Text = "Birthday Party";
             this.birthdayPage.UseVisualStyleBackColor = true;
             // 
+            // cakeWriting
+            // 
+            this.cakeWriting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cakeWriting.Location = new System.Drawing.Point(12, 142);
+            this.cakeWriting.Name = "cakeWriting";
+            this.cakeWriting.Size = new System.Drawing.Size(186, 23);
+            this.cakeWriting.TabIndex = 13;
+            this.cakeWriting.Text = "Happy Birthday";
+            this.cakeWriting.TextChanged += new System.EventHandler(this.cakeWriting_TextChanged);
+            // 
+            // tooLongLabel
+            // 
+            this.tooLongLabel.AutoSize = true;
+            this.tooLongLabel.BackColor = System.Drawing.Color.Red;
+            this.tooLongLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tooLongLabel.Location = new System.Drawing.Point(115, 98);
+            this.tooLongLabel.Name = "tooLongLabel";
+            this.tooLongLabel.Size = new System.Drawing.Size(83, 17);
+            this.tooLongLabel.TabIndex = 12;
+            this.tooLongLabel.Text = "TOO LONG";
+            // 
+            // cakeWritingLabel
+            // 
+            this.cakeWritingLabel.AutoSize = true;
+            this.cakeWritingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cakeWritingLabel.Location = new System.Drawing.Point(12, 98);
+            this.cakeWritingLabel.Name = "cakeWritingLabel";
+            this.cakeWritingLabel.Size = new System.Drawing.Size(88, 17);
+            this.cakeWritingLabel.TabIndex = 11;
+            this.cakeWritingLabel.Text = "Cake Writing";
+            // 
             // numberBirthdayLabel
             // 
             this.numberBirthdayLabel.AutoSize = true;
@@ -241,37 +272,6 @@
             this.fancyBirthday.Text = "Fancy Decoration";
             this.fancyBirthday.UseVisualStyleBackColor = true;
             this.fancyBirthday.CheckedChanged += new System.EventHandler(this.fancyBirthday_CheckedChanged);
-            // 
-            // cakeWritingLabel
-            // 
-            this.cakeWritingLabel.AutoSize = true;
-            this.cakeWritingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cakeWritingLabel.Location = new System.Drawing.Point(12, 98);
-            this.cakeWritingLabel.Name = "cakeWritingLabel";
-            this.cakeWritingLabel.Size = new System.Drawing.Size(88, 17);
-            this.cakeWritingLabel.TabIndex = 11;
-            this.cakeWritingLabel.Text = "Cake Writing";
-            // 
-            // tooLongLabel
-            // 
-            this.tooLongLabel.AutoSize = true;
-            this.tooLongLabel.BackColor = System.Drawing.Color.Red;
-            this.tooLongLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tooLongLabel.Location = new System.Drawing.Point(115, 98);
-            this.tooLongLabel.Name = "tooLongLabel";
-            this.tooLongLabel.Size = new System.Drawing.Size(83, 17);
-            this.tooLongLabel.TabIndex = 12;
-            this.tooLongLabel.Text = "TOO LONG";
-            // 
-            // cakeWriting
-            // 
-            this.cakeWriting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cakeWriting.Location = new System.Drawing.Point(12, 142);
-            this.cakeWriting.Name = "cakeWriting";
-            this.cakeWriting.Size = new System.Drawing.Size(186, 23);
-            this.cakeWriting.TabIndex = 13;
-            this.cakeWriting.Text = "Happy Birthday";
-            this.cakeWriting.TextChanged += new System.EventHandler(this.cakeWriting_TextChanged);
             // 
             // partyForm
             // 

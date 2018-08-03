@@ -1,35 +1,26 @@
 ﻿namespace PartyPlanner
 {
-    class DinnerParty
+    class DinnerParty : Party
     {
-        public int NumberOfPeople { get; set; }
-        public bool FancyDecorations { get; set; }
         public bool HealthyOption { get; set; }
-        public decimal Cost {
+        override public decimal Cost
+        {
             get
             {
-                decimal discount = 0;
-
+                decimal totalCost = base.Cost + CalculateCostOfBeveragesPerPerson() * NumberOfPeople;
+                
                 if (HealthyOption)
-                    discount = 0.05M;
+                    totalCost *= 0.95M;
 
-                return (CalculateCostOfDecoration() +
-                        ((CostOfFoodPerPerson + CalculateCostOfBeveragesPerPerson()) * NumberOfPeople)) * (1 - discount);
+                return totalCost;
             }
         }
-
-        public const int CostOfFoodPerPerson = 25;
 
         public DinnerParty(int numberOfPeople, bool fancyDecorations, bool healthyOption)
         {
             NumberOfPeople = numberOfPeople;
             FancyDecorations = fancyDecorations;
             HealthyOption = healthyOption;
-        }
-
-        public decimal CalculateCostOfDecoration()
-        {
-            return FancyDecorations ? 15 * NumberOfPeople + 50M : 7.5M * NumberOfPeople + 30M;
         }
 
         public decimal CalculateCostOfBeveragesPerPerson()
